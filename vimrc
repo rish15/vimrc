@@ -1,8 +1,33 @@
+set tabstop=4
 set nocompatible              " be iMproved, required
 filetype off                  " required
 set number
+set relativenumber
 set clipboard=unnamed
 map <C-a> <esc>ggVG<CR>
+map <Enter> o<ESC>
+map <S-Enter> O<ESC>
+set hlsearch "hightlight  search
+set incsearch "match while typing
+"netrw tree view configurations
+"the following line sets directory view to tree
+let g:netrw_liststyle = 4 
+let g:netrw_browse_split = 3 
+"removing the banner
+let g:netrw_banner = 0
+"open files in vertical split
+let g:netrw_browse_split = 2 
+"width of the directory browser(tree)
+let g:netrw_winsize = 25 
+"find file in all subdirectories of a directory
+set path+=**
+"set wildmenu "helps to find all files with .xx extension
+"leader key
+let mapleader = " "
+filetype plugin indent on
+syntax on
+set encoding=utf-8
+set clipboard=unnamedplus 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 
@@ -33,6 +58,11 @@ Plugin 'tpope/vim-fugitive'
 " -----------------------------------------------------------------
 Plugin 'mattn/emmet-vim'
 Plugin 'valloric/youcompleteme'
+Plugin 'tpope/vim-surround'
+Plugin 'herringtondarkholme/yats.vim'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'w0rp/ale'
 "----------------------------------------------------------------
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -48,3 +78,5 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+set mouse=c
